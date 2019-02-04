@@ -1,0 +1,56 @@
+<html>
+<h1 align="center">Employee Personal Data Form</h1>
+<meta charset="UTF-8">
+
+<style type="text/css">
+input {
+	padding: 3px;
+}
+body {
+	background: #d9dbe0;
+	color: #272b33;
+	padding: 40px;
+}
+</style>
+<body>
+	<br />
+	<form action="datafiller-response.jsp">
+		Purpose of the form: <br /> <input type="checkbox"
+			name="purposeOption" value="Information change"> Information
+		change <input type="checkbox" name="purposeOption" value="New hire">New
+		hire <input type="checkbox" name="purposeOption" value="Rehire">
+		Rehire <input type="checkbox" name="purposeOption" value="other">other
+		<br /> <br /> Citizenship: <select name="citizenship">
+			<option></option>
+			<option>US</option>
+			<option>EU</option>
+			<option>other</option>
+		</select> <br /> <br /> First name: <input type="text" required
+			name="firstName" /> Last name: <input type="text" required
+			name="lastName" /> <br /> <br /> Date of Birth: <input type="text"
+			required name="birthDate" /> Place of Birth: <input type="text"
+			required name="birthPlace" /> <br /> <br /> Address: <br /> <br />
+		Street: <input type="text" name="street" /> City: <input type="text"
+			name="city" /> <br /> <br /> Zip Code: <input type="text"
+			name="zip" /> Country: <input type="text" name="country" /> <br />
+		<br /> Email: <input type="text" name="email" /> Phone number: <input
+			type="text" name="phone" /> <br /> <br /> Gender:<br /> <br /> <input
+			type="radio" name="gender" value="female"> Female <input
+			type="radio" name="gender" value="male"> Male <br /> <br />
+		Marital status:<br /> <br /> <input type="radio" name="maritalstat"
+			value="married"> Married <input type="radio"
+			name="maritalstat" value="single"> Single <input type="radio"
+			name="maritalstat" value="partnered"> Partnered <br /> <br />
+		Education: <br /> <br /> <input type="checkbox" name="edu"
+			value="college"> Some college <input type="checkbox"
+			name="edu" value="tech"> Technical school <input
+			type="checkbox" name="edu" value="ba"> Bachelors Degree <br />
+		<input type="checkbox" name="edu" value="ma"> Masters Degree <input
+			type="checkbox" name="edu" value="phd"> Phd <input
+			type="checkbox" name="edu" value="other"> other <br /> <br />
+		<h6 align="center">
+			<input type="submit" value="Submit" />
+		</h6>
+	</form>
+</body>
+</html>
