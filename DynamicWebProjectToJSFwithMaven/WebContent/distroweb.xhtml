@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+   
+<h:head>
+	<title>Linux distro Quiz</title>
+	<font  face="Courier"> </font>
+	<style>
+	
+	body {
+	 background: #bdc9bb;}
+	 .tab {position:absolute;left:170px; }
+	 .tab2 {position:absolute;left:370px;}
+     .error {color:#ed8a21;}
+    </style>
+</h:head>
+<h:body>
+	<h:form>
+	
+  <font color="black" face="Courier new" size="+1">
+ 
+	<h5><a href="about.xhtml">About</a> | <a href="quizzes.xhtml">Quizzes</a> | <a href="index.xhtml">Home</a></h5>
+	<hr/> 
+	 <h5>
+  Choose one answer:
+	<br/><br/><br/>
+  1. Which is NOT Debian-based distro:
+	<br/>
+		<h:selectOneRadio id="debian1" value="#{distroOption.debian1}" required="true" label="debian1" layout="pageDirection" >
+			<f:selectItem itemValue="Kali Linux" itemLabel="Kali Linux" />			
+			<f:selectItem itemValue="Ubuntu" itemLabel="Ubuntu" />
+			<f:selectItem itemValue="CentOS" itemLabel="CentOS" />
+			<f:selectItem itemValue="Kubuntu" itemLabel="Kubuntu" />			
+		</h:selectOneRadio></h5>
+		<h6><h:message id="message" for="debian1" styleClass="error"></h:message></h6>
+		<h5>
+  2. Initially Mandrake/Mandriva derivate, the distro has diverged significantly form it:
+	<br/>
+		<h:selectOneRadio id="mandr" value="#{distroOption.mandr}" label="mandr" layout="pageDirection">
+			<f:selectItem itemValue="PCLinuxOS" itemLabel="PCLinuxOS" />
+			<f:selectItem itemValue="openMandriva" itemLabel="openMandriva" />
+			<f:selectItem itemValue="Fedora" itemLabel="Fedora" />
+			<f:selectItem itemValue="CentOs" itemLabel="CentOs" />
+		</h:selectOneRadio>	<br/>
+		
+  3. Primarly used for online applications, developed by Google, mostly found on laptops and notebooks.
+     <br/>It is not a traditional GNU/Linux "distro".
+     <br/>
+		<h:selectOneRadio id="google" value="#{distroOption.google}" label="google" layout="pageDirection" >
+			<f:selectItem itemValue="SmartOS" itemLabel="SmartOS" />
+			<f:selectItem itemValue="UbuntuTouch" itemLabel="UbuntuTouch" />
+			<f:selectItem itemValue="ChromeOS" itemLabel="ChromeOS" />
+			<f:selectItem itemValue="Netrunner" itemLabel="Netrunner" />
+		</h:selectOneRadio><br/>
+		
+  4. Released in 2003, uses DNF as a tool to manage the RPM packages, a trademark of Red Hat, Inc.
+  	 <br/>
+		<h:selectOneRadio id="redhat" value="#{distroOption.redhat}" label="redhat" layout="pageDirection" >
+			<f:selectItem itemValue="Fedora" itemLabel="Fedora" />
+			<f:selectItem itemValue="Xfce" itemLabel="Xfce" />
+			<f:selectItem itemValue="Zorin" itemLabel="Zorin" />			
+		</h:selectOneRadio><br/>
+		
+  5. Highly ranked on DistroWatch, based on Debian and Ubuntu, first released in 2006:
+     <br/>
+		<h:selectOneRadio id="hrank" value="#{distroOption.hrank}" label="hrank" layout="pageDirection" >
+			<f:selectItem itemValue="Slackware" itemLabel="Slackware" />
+			<f:selectItem itemValue="Linux Mint" itemLabel="Linux Mint" />
+			<f:selectItem itemValue="Arch Linux" itemLabel="Arch Linux" />			
+		</h:selectOneRadio><br/>
+		
+  6. Uses 'pacman' package manager:
+     <br/>
+		<h:selectOneRadio id="pacman" value="#{distroOption.pacman}" label="pacman" layout="pageDirection">
+			<f:selectItem itemValue="Arch Linux" itemLabel="Arch Linux" />
+			<f:selectItem itemValue="CentOS" itemLabel="CentOS" />
+			<f:selectItem itemValue="Gentoo" itemLabel="Gentoo" />			
+		</h:selectOneRadio><br/>
+		
+  7. Raspbian operating system is based on:
+     <br/>
+		<h:selectOneRadio id="raspbian" value="#{distroOption.raspbian}" label="raspbian" layout="pageDirection">
+			<f:selectItem itemValue="Manjaro Linux" itemLabel="Manjaro Linux" />
+			<f:selectItem itemValue="Gentoo" itemLabel="Gentoo" />
+			<f:selectItem itemValue="Debian" itemLabel="Debian" />			
+		</h:selectOneRadio><br/>
+		
+  8. One of the oldest Linux distributions, not updated since 1995.
+     <br/>
+		<h:selectOneRadio id="oldest" value="#{distroOption.oldest}" label="oldest" layout="pageDirection">
+			<f:selectItem itemValue="Arch Linux" itemLabel="Arch Linux" />
+			<f:selectItem itemValue="Fedora" itemLabel="Fedora" />
+			<f:selectItem itemValue="Qubes OS" itemLabel="Qubes OS" />
+			<f:selectItem itemValue="Yggdrasil" itemLabel="Yggdrasil" />			
+		</h:selectOneRadio><br/>
+		
+  9. A security-focused desktop operating system that aims to provide security through isolation:
+     <br/>
+		<h:selectOneRadio id="secur" value="#{distroOption.secur}" label="secur" layout="pageDirection">
+			<f:selectItem itemValue="Arch Linux" itemLabel="Arch Linux" />
+			<f:selectItem itemValue="Qubec OS" itemLabel="Qubec OS" />
+			<f:selectItem itemValue="openSUSE" itemLabel="openSUSE" />			
+		</h:selectOneRadio></h5>
+		<br/></font>
+
+	 <span class="tab"> <h:commandButton value="Check answers" action="distroweb-response" style="width:140px;height:40px"/></span> 
+	 <span class="tab2"> <h:commandButton value="Reset" type="reset" style="width:140px;height:40px"/></span>
+	  <br/><br/> <hr/> <br/><br/>
+	</h:form>
+</h:body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+       
+ <h:head>
+	<title>Quiz - response file</title>
+	<font  face="Courier"> </font>
+	<style>
+	
+	body {
+	 background: #ede2da;	
+	 }
+    .error {
+	color:#ed8a21;
+}
+    </style>
+</h:head>
+<h:body>
+		
+		<h3> Your answers: </h3>
+		<h4>
+	1: #{javaSpringOption.ioc1} <br/>
+	2: #{javaSpringOption.customevent} <br/>
+	3: #{javaSpringOption.stateless} <br/>
+	4: #{javaSpringOption.transaction} <br/>
+	5: #{javaSpringOption.beanfactory} <br/>
+	6: #{javaSpringOption.ioc2} <br/>
+	7: #{javaSpringOption.beans} <br/>
+	8: #{javaSpringOption.notmodule} <br/>
+	9: #{javaSpringOption.beaninjection} <br/>
+	10: #{javaSpringOption.awtypes} <br/>
+	11: #{javaSpringOption.controller} <br/>
+	12: #{javaSpringOption.ditypes} <br/> 
+	</h4>
+    
+    <h2> Correct answers: </h2>
+    <h4> 
+     1. A design pattern which implements Inversion of Control for software applications: 
+     <br/>   - Dependency Injection<br/>
+     2. A class that can be extended to create custom event:
+     <br/>   - ApplicationEvent<br/>
+     3. What is the scope of stateless bean?
+     <br/>   - Singleton<br/>
+     4. The types of the transaction management Spring supports:
+     <br/>   - both pragmatic and declarative<br/>
+     5. Which is the right implementation class of BeanFactory?  
+     <br/>   - XmlBeanFactory<br/>
+     6. Inversion of Control can be achieved through ...... pattern:
+     <br/>   - all are possible: Strategy design pattern, Service Locator pattern, Factory pattern or Dependency Injection (DI).<br/>
+     7. Beans defined in Spring framework are by default: 
+     <br/>   - Singleton<br/>
+     8. Which is NOT a Spring module? 
+     <br/>   - HTML/JSP<br/>
+     9. What are different types of Bean Injection: 
+     <br/>   - constructor and setter<br/>
+     10. byName, byType, constructor, no and autodetect are different modes of:
+     <br/>   - Autowire<br/>
+     11. Controller in Spring is a(n):
+     <br/>   - interface<br/>
+     12. Types of ID:
+     <br/>   - both constructor-based and setter-based<br/>
+     
+    <br/>     
+    </h4> 
+</h:body>
+</html>

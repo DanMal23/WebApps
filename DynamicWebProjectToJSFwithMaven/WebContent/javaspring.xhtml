@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+ 
+<h:head>
+	<title>Java Spring Quiz</title>
+	<font  face="Courier"> </font>
+	<style type="text/css">
+	.label {display: block;}
+	body {
+	 background: #cebbab;	
+	 }
+	 .tab {position:absolute;left:170px; }
+	 .tab2 {position:absolute;left:370px;}
+     .error {
+	color:#ed8a21;
+}
+    </style>
+</h:head>
+<h:body>
+	<h:form>
+	
+  <font color="black" face="Courier new" size="+1">
+ 
+	<h5><a href="about.xhtml">About</a> | <a href="quizzes.xhtml">Quizzes</a> | <a href="index.xhtml">Home</a></h5>
+	<hr/> 
+	 <h5>
+  Choose one answer:
+	<br/><br/><br/>
+  1. A design pattern which implements Inversion of Control for software applications:
+	<br/>
+		<h:selectOneRadio id="ioc1" value="#{javaSpringOption.ioc1}" required="true" label="ioc1" layout="pageDirection">			
+			<f:selectItem itemValue="Dependency Injection" itemLabel="Dependency Injection" />
+			<f:selectItem itemValue="REST" itemLabel="REST" />
+			<f:selectItem itemValue="Spring_module" itemLabel="Spring_module" />
+		</h:selectOneRadio></h5>
+		<h6><h:message id="message" for="ioc1" styleClass="error"></h:message></h6>
+		<h5>
+  2. A class that can be extended to create custom event:
+	<br/>
+		<h:selectOneRadio id="customevent" value="#{javaSpringOption.customevent}" label="customevent" layout="pageDirection">
+			<f:selectItem itemValue="Event" itemLabel="Event" />
+			<f:selectItem itemValue="SpringEven" itemLabel="SpringEven" />
+			<f:selectItem itemValue="ApplicationEvent" itemLabel="ApplicationEvent" />
+		</h:selectOneRadio><br/>
+  3. What is the scope of stateless bean?
+     <br/>
+		<h:selectOneRadio id="stateless" value="#{javaSpringOption.stateless}" label="stateless" layout="pageDirection">
+			<f:selectItem itemValue="Singleton" itemLabel="Singleton" />
+			<f:selectItem itemValue="global-session" itemLabel="global-session" />
+			<f:selectItem itemValue="request" itemLabel="request" />
+		</h:selectOneRadio><br/>
+  4. The types of the transaction management Spring supports: 
+  	 <br/>
+		<h:selectOneRadio id="transaction" value="#{javaSpringOption.transaction}" label="transaction" layout="pageDirection">
+			<f:selectItem itemValue="programmatic" itemLabel="programmatic" />
+			<f:selectItem itemValue="declarative" itemLabel="declarative" />
+			<f:selectItem itemValue="both" itemLabel="both" />			
+		</h:selectOneRadio><br/>
+  5. Which is the right implementation class of BeanFactory?
+     <br/>
+		<h:selectOneRadio id="beanfactory" value="#{javaSpringOption.beanfactory}" label="beanfactory" layout="pageDirection">
+			<f:selectItem itemValue="XmlBeanFactory"  itemLabel="XmlBeanFactory" />
+			<f:selectItem itemValue="FileSystemBeanFactory" itemLabel="FileSystemBeanFactory" />
+			<f:selectItem itemValue="AdvancedBeanFactory" itemLabel="AdvancedBeanFactory" />			
+		</h:selectOneRadio><br/>
+  6. Inversion of Control can be achieved through ...... pattern: 
+     <br/>
+		<h:selectOneRadio id="ioc2" value="#{javaSpringOption.ioc2}" label="ioc2" layout="pageDirection">
+			<f:selectItem itemValue="Strategy design" itemLabel="Strategy design" />
+			<f:selectItem itemValue="Service Locator"  itemLabel="Service Locator" />
+			<f:selectItem itemValue="Factory pattern" itemLabel="Factory pattern" />	
+			<f:selectItem itemValue="Dependency Injection" itemLabel="Dependency Injection" />	
+			<f:selectItem itemValue="all are possible" itemLabel="all are possible" />			
+		</h:selectOneRadio><br/>
+  7. Beans defined in Spring framework are by default:
+     <br/>
+		<h:selectOneRadio id="beans" value="#{javaSpringOption.beans}" label="beans" layout="pageDirection">
+			<f:selectItem itemValue="Final" itemLabel="Final" />
+			<f:selectItem itemValue="Abstract" itemLabel="Abstract" />
+			<f:selectItem itemValue="Singleton" itemLabel="Singleton" />
+			<f:selectItem itemValue="initialized" itemLabel="initialized" />				
+		</h:selectOneRadio><br/>
+  8. Which is NOT a Spring module?
+     <br/>
+		<h:selectOneRadio id="notmodule" value="#{javaSpringOption.notmodule}" label="notmodule" layout="pageDirection">
+			<f:selectItem itemValue="HTML/JSP" itemLabel="HTML/JSP" />
+			<f:selectItem itemValue="AOP" itemLabel="AOP" />
+			<f:selectItem itemValue="O/R Integration" itemLabel="O/R Integration" />
+			<f:selectItem itemValue="Spring MVC" itemLabel="Spring MVC" />			
+		</h:selectOneRadio><br/>
+  9. What are different types of Bean Injection:
+     <br/>
+		<h:selectOneRadio id="beaninjection" value="#{javaSpringOption.beaninjection}" label="beaninjection" layout="pageDirection">
+			<f:selectItem itemValue="getter" itemLabel="getter" />
+			<f:selectItem itemValue="constructor and setter" itemLabel="constructor and setter" />
+			<f:selectItem itemValue="getter and setter" itemLabel="getter and setter" />
+			<f:selectItem itemValue="constructor" itemLabel="constructor" />			
+		</h:selectOneRadio><br/>
+  10. byName, byType, constructor, no and autodetect are different modes of:
+  		<br/>
+		<h:selectOneRadio id="awtypes" value="#{javaSpringOption.awtypes}" label="awtypes" layout="pageDirection">
+			<f:selectItem itemValue="Autowire" itemLabel="Autowire" />
+			<f:selectItem itemValue="Beans" itemLabel="Beans" />
+			<f:selectItem itemValue="Advice" itemLabel="Advice" />			
+		</h:selectOneRadio><br/>
+  11. Controller in Spring is a(n):
+    	<br/>
+		 <h:selectOneRadio id="controller" value="#{javaSpringOption.controller}" label="controller" layout="pageDirection">
+			<f:selectItem itemValue="abstract class" itemLabel="abstract class" />
+			<f:selectItem itemValue="interface" itemLabel="interface" />
+			<f:selectItem itemValue="final class" itemLabel="final class" />			
+		</h:selectOneRadio><br/>
+  12. Types of ID:	
+      <br/>
+		<h:selectOneRadio id="ditypes" value="#{javaSpringOption.ditypes}" label="ditypes" layout="pageDirection">
+			<f:selectItem itemValue="constructor-based" itemLabel="constructor-based" />
+			<f:selectItem itemValue="setter-based" itemLabel="setter-based" />
+			<f:selectItem itemValue="both" itemLabel="both" />			
+		</h:selectOneRadio>		
+		</h5>
+		<br/></font>
+	 <span class="tab"> <h:commandButton value="Check answers" action="javaspring-response" style="width:140px;height:40px"/></span> 
+	 <span class="tab2"> <h:commandButton value="Reset" type="reset" style="width:140px;height:40px"/></span>
+	  <br/><br/>
+	  
+	   <hr/>
+	   
+	   <br/><br/>
+	</h:form>
+	
+</h:body>
+
+</html>

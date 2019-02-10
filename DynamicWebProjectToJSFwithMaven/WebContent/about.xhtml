@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+      
+    <h:head>
+	<title>JSF MavenInDWP - About</title>	
+	 <style type="text/css">
+ body {
+        background: gray;
+        color: white;
+      }
+  </style>
+</h:head>
+<h:body>
+	<h3><a href="about.xhtml">About</a> | <a href="quizzes.xhtml">Quizzes</a> | <a href="index.xhtml">Home</a></h3>
+	<hr/> 
+	<h1>About the page:</h1>
+	<h3> The content consists of quizzes.<br/>
+	     Go to Quizzes section to choose one.<br/><br/></h3>
+	<h2> <h:outputText value="#{mbeanClass.about}" /></h2>
+	<h:inputHidden value="#{mbeanClass.setAbout('About the Site')}"></h:inputHidden>
+	<h2> <h:outputText value="#{mbeanClass.about}" /></h2>
+	<hr/> 
+	<h:form>
+	<h3><h:commandLink action="about" value="About" /> |
+	<h:commandLink action="quizzes" value="Quizzes" /> |
+	<h:commandLink action="index" value="Home" /> |	
+    </h3></h:form>
+</h:body>
+
+</html>

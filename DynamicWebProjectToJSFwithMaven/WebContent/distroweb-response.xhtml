@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+      
+ <h:head>
+	<title>Quiz - response file</title>
+	<font  face="Courier"> </font>
+	<style>
+	
+	body {
+	 background: #d6e0d5;	
+	 }
+    .error {
+	color:#ed8a21;
+}
+    </style>
+</h:head>
+<h:body>
+		<br/>
+		<h3> Your answers: </h3>
+		<h4>
+	1: #{distroOption.debian1} <br/>
+	2: #{distroOption.mandr} <br/>
+	3: #{distroOption.google} <br/>
+	4: #{distroOption.redhat} <br/>
+	5: #{distroOption.hrank} <br/>
+	6: #{distroOption.pacman} <br/>
+	7: #{distroOption.raspbian} <br/>
+	8: #{distroOption.oldest} <br/>
+	9: #{distroOption.secur} <br/> </h4>
+    <br/>
+    <h2> Correct answers: </h2>
+    <h4> 
+     1. Which is NOT Debian-based distro: 
+     <br/>   - CentOS  <br/>
+     2. Initially Mandrake/Mandriva derivate, the distro has diverged significantly form it: 
+     <br/>   - PCLinuxOS <br/>
+     3. Primarly used for online applications, developed by Google, mostly found on laptops and notebooks.
+         It is not a traditional GNU/Linux "distro".
+     <br/>   - ChromeOS<br/>
+     4.  Released in 2003, uses DNF as a tool to manage the RPM packages, a trademark of Red Hat, Inc.
+     <br/>   - Fedora<br/>
+     5.  Highly ranked on DistroWatch, based on Debian and Ubuntu, first released in 2006:
+     <br/>   - Linux Mint<br/>
+     6.  Uses 'pacman' package manager:
+     <br/>   - Arch Linux<br/>
+     7.  Raspbian operating system is based on:
+     <br/>   - Debian<br/>
+     8.  One of the oldest Linux distributions, not updated since 1995.
+     <br/>   - Yggdrasil<br/>
+     9.  A security-focused desktop operating system that aims to provide security through isolation:
+        - Qubec OS
+    <br/>     
+    </h4> 
+</h:body>
+</html>

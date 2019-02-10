@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+ 
+<h:head>
+	<title>Quiz - response file</title>
+	<font  face="Courier"> </font>
+	<style>
+	
+	body {
+	 background: #dbd2d2;	
+	 }
+    .error {
+	color:#ed8a21;
+}
+    </style>
+</h:head>
+<h:body>
+		<br/>
+		<h3> Your answers: </h3>
+		<h4>
+	1: #{webOption.maven} <br/>
+	2: #{webOption.catalina} <br/>
+	3: #{webOption.glassfish} <br/>
+	4: #{webOption.spring} <br/>
+	5: #{webOption.style} <br/>
+	6: #{webOption.soap} <br/>
+	7: #{webOption.jboss} <br/>
+	8: #{webOption.servlets} <br/>
+	9: #{webOption.json} <br/> </h4>
+    <br/>
+    <h2> Correct answers: </h2>
+    <h4> 
+     1. Apache Maven and WildFly are written in: Java <br/>
+     2. What is the file catalina.out used for? - Tomcat logs <br/>
+     3. What is GlassFish? - application server <br/>
+     4. Spring runs under: Tomcat <br/>
+     5. A style of software architecture: REST <br/>
+     6. SOAP messaging protocol is encoded using: xml <br/>
+     7. JBoss application server is a former name of: GlassFish <br/>
+     8. Servlets can be generated from: JSPs <br/>
+     9. JSON is a(n): file format <br/>
+     
+    </h4> 
+</h:body>
+</html>

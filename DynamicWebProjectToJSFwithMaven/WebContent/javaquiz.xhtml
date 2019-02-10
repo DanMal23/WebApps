@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+ 
+<h:head>
+	<title>Java Quiz</title>
+	<font  face="Courier"> </font>
+	<style type="text/css">
+	
+    }
+	body {
+	 background: #cebbab;	
+	 }
+	 .tab {position:absolute;left:170px; }
+	 .tab2 {position:absolute;left:370px;}
+
+    </style>
+</h:head>
+<h:body>
+	<h:form>
+	
+  <font color="black" face="Courier new" size="+1">
+ 
+	<h5><a href="about.xhtml">About</a> | <a href="quizzes.xhtml">Quizzes</a> | <a href="index.xhtml">Home</a></h5>
+	<hr/> 
+	 
+  <h5>Choose one answer:
+	<br/><br/><br/>
+  1. Encapsulation is:
+	
+		<h:selectOneRadio id="encapsulation" value="#{javaOption.encapsulation}" label="encapsulation" layout="pageDirection">
+		    <f:selectItem itemValue="data deletion" itemLabel="data deletion" />
+		    <f:selectItem itemValue="data hiding" itemLabel="data hiding" />						
+			<f:selectItem itemValue="data saving" itemLabel="data saving" />
+		</h:selectOneRadio>	<br/>	
+  2. HashMap stores the data in the form of: 
+	<br/>
+		<h:selectOneRadio id="hashmap" value="#{javaOption.hashmap}" label="hashmap" layout="pageDirection" >
+			<f:selectItem itemValue="array lists" itemLabel="array lists" />
+			<f:selectItem itemValue="key-value pairs" itemLabel="key-value pairs" />
+			<f:selectItem itemValue="functions" itemLabel="functions" />
+		</h:selectOneRadio><br/>
+  3.A Java package can:
+     <br/>
+		<h:selectOneRadio id="pack" value="#{javaOption.pack}" label="pack" layout="pageDirection" >
+			<f:selectItem itemValue="contain both Classes and Interfaces" 
+			itemLabel="contain both Classes and Interfaces" />
+			<f:selectItem itemValue="contain only Java source files" 
+			itemLabel="contain only Java source files" />
+			<f:selectItem itemValue="should be declared as private in order to deny importing them" 
+			 itemLabel="should be declared as private in order to deny importing them" />
+		</h:selectOneRadio><br/>
+  4. An interface: 
+  	 <br/>
+		<h:selectOneRadio id="interf" value="#{javaOption.interf}" label="interf" layout="pageDirection" >
+			<f:selectItem itemValue="can implement another interface" itemLabel="can implement another interface" />
+			<f:selectItem itemValue="can be instantiated" itemLabel="can be instantiated" />
+			<f:selectItem itemValue="has all methods abstract by default"
+			 itemLabel="has all methods abstract by default" />			
+		</h:selectOneRadio><br/>
+  5. Finalize method will always run:
+     <br/>
+		<h:selectOneRadio id="finalize" value="#{javaOption.finalize}" label="finalize" layout="pageDirection" >
+			<f:selectItem itemValue="when an object becomes unreachable" 
+			 itemLabel="when an object becomes unreachable" />
+			<f:selectItem itemValue="after an object is garbage collected"
+			 itemLabel="after an object is garbage collected" />
+			<f:selectItem itemValue="before an object is garbage collected"
+			 itemLabel="before an object is garbage collected" />			
+		</h:selectOneRadio><br/>
+  6. Method overriding is:
+     <br/>
+		<h:selectOneRadio id="overriding" value="#{javaOption.overriding}" label="overriding" layout="pageDirection" >
+			<f:selectItem itemValue="same name different signature"
+			 itemLabel="same name different signature" />
+			<f:selectItem itemValue="same name same signature" 
+			 itemLabel="same name same signature" />
+			<f:selectItem itemValue="both methods in the same class"
+			 itemLabel="both methods in the same class" />			
+		</h:selectOneRadio><br/>
+  7. Which is NOT a valid wrapper type object creation?
+     <br/>
+		<h:selectOneRadio id="wrapper" value="#{javaOption.wrapper}" label="wrapper" layout="pageDirection" >
+			<f:selectItem itemValue="New Integer(“123”);" itemLabel="New Integer(“123”);" />
+			<f:selectItem itemValue="New Byte(“11”);" itemLabel="New Byte(“11”);" />
+			<f:selectItem itemValue="New Boolean(“truth”);" itemLabel="New Boolean(“truth”);" />			
+		</h:selectOneRadio><br/>
+  8. Which of the following does NOT return a primitive data type?
+     <br/>
+		<h:selectOneRadio id="primitive" value="#{javaOption.primitive}" label="primitive" layout="pageDirection" >
+			<f:selectItem itemValue="Integer.intValue()" itemLabel="Integer.intValue()" />
+			<f:selectItem itemValue="Integer.getInteger()" itemLabel="Integer.getInteger()" />
+			<f:selectItem itemValue="Integer.parseInt()" itemLabel="Integer.parseInt()" />			
+		</h:selectOneRadio><br/>
+  9. Which command disassembles a class file:
+     <br/>
+		<h:selectOneRadio id="disassambler" value="#{javaOption.disassambler}" label="disassambler" layout="pageDirection" >
+			<f:selectItem itemValue="javap" itemLabel="javap" />
+			<f:selectItem itemValue="javac" itemLabel="javac" />
+			<f:selectItem itemValue="javah" itemLabel="javah" />			
+		</h:selectOneRadio><br/>
+  10. Which is an implementation of Map interface:
+  		<br/>
+		<h:selectOneRadio id="map" value="#{javaOption.map}" label="map" layout="pageDirection" >
+			<f:selectItem itemValue="TreeSet" itemLabel="TreeSet" />
+			<f:selectItem itemValue="Hashtable" itemLabel="Hashtable" />
+			<f:selectItem itemValue="ArrayList" itemLabel="javah" />			
+		</h:selectOneRadio><br/>
+  11. TreeSet uses this interface to sort the data:
+    	<br/>
+		 <h:selectOneRadio id="treeset" value="#{javaOption.treeset}" label="treeset" layout="pageDirection" >
+			<f:selectItem itemValue="Serializable" itemLabel="Serializable" />
+			<f:selectItem itemValue="SortTable" itemLabel="SortTable" />
+			<f:selectItem itemValue="Comparable" itemLabel="Comparable" />			
+		</h:selectOneRadio><br/>
+  12. Which is true about StringBuffer class:	
+      <br/>
+		<h:selectOneRadio id="stringbuffer" value="#{javaOption.stringbuffer}" label="stringbuffer" layout="pageDirection" >
+			<f:selectItem itemValue="it is a sub class of String class" itemLabel="it is a sub class of String class" />
+			<f:selectItem itemValue="cannot be modified" itemLabel="cannot be modified" />
+			<f:selectItem itemValue="is mutable" itemLabel="is mutable" />			
+		</h:selectOneRadio>		
+		</h5>
+		<br/></font>
+
+	 <span class="tab"> <h:commandButton value="Check answers" action="javaquiz-response" style="width:140px;height:40px"/></span> 
+	 <span class="tab2"> <h:commandButton value="Reset" type="reset" style="width:140px;height:40px"/></span>
+	  <br/><br/>
+	  
+	   <hr/>
+	   
+	   <br/><br/>
+	</h:form>
+	
+</h:body>
+
+</html>

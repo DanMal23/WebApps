@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+      
+ <h:head>
+	<title>Quiz - response file</title>
+	<font  face="Courier"> </font>
+	<style>
+	
+	body {
+	 background: #ede2da;	
+	 }
+    .error {
+	color:#ed8a21;
+}
+    </style>
+</h:head>
+<h:body>
+		
+		<h3> Your answers: </h3>
+		<h4>
+	1: #{javaOption.encapsulation} <br/>
+	2: #{javaOption.hashmap} <br/>
+	3: #{javaOption.pack} <br/>
+	4: #{javaOption.interf} <br/>
+	5: #{javaOption.finalize} <br/>
+	6: #{javaOption.overriding} <br/>
+	7: #{javaOption.wrapper} <br/>
+	8: #{javaOption.primitive} <br/>
+	9: #{javaOption.disassambler} <br/>
+	10: #{javaOption.map} <br/>
+	11: #{javaOption.treeset} <br/>
+	12: #{javaOption.stringbuffer} <br/> 
+	</h4>
+    
+    <h2> Correct answers: </h2>
+    <h4> 
+     1. Encapsulation is: 
+     <br/>   - data hiding  <br/>
+     2. HashMap stores the data in the form of:
+     <br/>   - key-value pairs <br/>
+     3. A Java package can:
+     <br/>   - contain both Classes and Interfaces<br/>
+     4. An interface: 
+     <br/>   - has all methods abstract by default<br/>
+     5. Finalize method will always run:  
+     <br/>   - before an object is garbage collected<br/>
+     6. Method overriding is: 
+     <br/>   - same name and same signature<br/>
+     7. Which is NOT a valid wrapper type object creation? 
+     <br/>   - New Boolean(“truth”)<br/>
+     8. Which of the following does NOT return a primitive data type? 
+     <br/>   - Integer.getInteger()<br/>
+     9. Which command disassembles a class file: 
+     <br/>   - javap <br/>
+     10. Which is an implementation of Map interface:
+     <br/>   - Hashtable <br/>
+     11. TreeSet uses this interface to sort the data:
+     <br/>   -  Comparable<br/>
+     12. Which is true about StringBuffer class:
+     <br/>   -  is mutable<br/>
+     
+    <br/>     
+    </h4> 
+</h:body>
+</html>

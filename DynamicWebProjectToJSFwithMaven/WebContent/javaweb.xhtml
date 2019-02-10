@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Web App Quiz</title>
+	<font  face="Courier"> </font>
+	<style>
+	
+	body {
+	 background: #c9bbbb;	
+	 }
+	 .tab {position:absolute;left:170px; }
+	 .tab2 {position:absolute;left:370px;}
+.error {
+	color:#ed8a21;
+}
+    </style>
+</h:head>
+<h:body>
+	<h:form>
+	
+  <font color="black" face="Courier new" size="+1">
+ 
+	<h5><a href="about.xhtml">About</a> | <a href="quizzes.xhtml">Quizzes</a> | <a href="index.xhtml">Home</a></h5>
+	<hr/> 
+ <h5>
+  Choose one answer:
+	<br/><br/><br/>
+  1. Apache Maven and WildFly are written in:
+	<br/>
+		<h:selectOneRadio id="maven" value="#{webOption.maven}"  label="maven" layout="pageDirection">
+			<f:selectItem itemValue="C++" itemLabel="C++" />
+			<f:selectItem itemValue="Scala" itemLabel="Scala" />
+			<f:selectItem itemValue="Java" itemLabel="Java" />
+			<f:selectItem itemValue="Ruby" itemLabel="Ruby" />
+		</h:selectOneRadio></h5>
+		<h6><h:message id="message" for="maven" styleClass="error"></h:message></h6>
+		<h5>
+  2. What is the file catalina.out used for?
+	<br/>
+		<h:selectOneRadio id="catalina" value="#{webOption.catalina}" label="catalina" layout="pageDirection">
+			<f:selectItem itemValue="Apache logs" itemLabel="Apache logs" />
+			<f:selectItem itemValue="Tomcat logs" itemLabel="Tomcat logs" />
+			<f:selectItem itemValue="MySQL logs" itemLabel="MySQL logs" />
+			<f:selectItem itemValue="James logs" itemLabel="James logs" />
+		</h:selectOneRadio><br/>	
+		
+  3. What is GlassFish?
+     <br/>
+		<h:selectOneRadio id="glassfish" value="#{webOption.glassfish}" label="glassfish" layout="pageDirection">
+			<f:selectItem itemValue="applet" itemLabel="applet" />
+			<f:selectItem itemValue="server" itemLabel="server" />
+			<f:selectItem itemValue="servlet" itemLabel="servlet" />
+			<f:selectItem itemValue="facelet" itemLabel="facelet" />
+		</h:selectOneRadio><br/>
+		
+  4. Spring runs under:
+  	 <br/>
+		<h:selectOneRadio id="spring" value="#{webOption.spring}" label="spring" layout="pageDirection">
+			<f:selectItem itemValue="Awt" itemLabel="Awt" />
+			<f:selectItem itemValue="Tomcat" itemLabel="Tomcat" />
+			<f:selectItem itemValue="Hibernate" itemLabel="Hibernate" />			
+		</h:selectOneRadio><br/>
+		
+  5. A style of software architecture:
+     <br/>
+		<h:selectOneRadio id="style" value="#{webOption.style}" label="style" layout="pageDirection">
+			<f:selectItem itemValue="REST" itemLabel="REST" />
+			<f:selectItem itemValue="JSF" itemLabel="JSF" />
+			<f:selectItem itemValue="URL" itemLabel="URL" />			
+		</h:selectOneRadio><br/>
+		
+  6. SOAP messaging protocol is encoded using:
+     <br/>
+		<h:selectOneRadio id="soap" value="#{webOption.soap}" label="soap" layout="pageDirection">
+			<f:selectItem itemValue="xml" itemLabel="xml" />
+			<f:selectItem itemValue="form" itemLabel="form" />
+			<f:selectItem itemValue="py" itemLabel="py" />			
+		</h:selectOneRadio><br/>
+		
+  7. JBoss application server is a former name of:
+     <br/>
+		<h:selectOneRadio id="jboss" value="#{webOption.jboss}" label="jboss" layout="pageDirection">
+			<f:selectItem itemValue="Jetty" itemLabel="Jetty" />
+			<f:selectItem itemValue="GlassFish" itemLabel="GlassFish" />
+			<f:selectItem itemValue="WildFly" itemLabel="WildFly" />			
+		</h:selectOneRadio><br/>
+		
+  8. Servlets can be generated from:
+     <br/>
+		<h:selectOneRadio id="servlets" value="#{webOption.servlets}" label="servlets" layout="pageDirection">
+			<f:selectItem itemValue="HTML" itemLabel="HTML" />
+			<f:selectItem itemValue="JSPs" itemLabel="JSPs" />
+			<f:selectItem itemValue="JSFs" itemLabel="JSFs" />			
+		</h:selectOneRadio><br/>
+		
+  9. JSON is a(n):
+     <br/>
+		<h:selectOneRadio id="json" value="#{webOption.json}" label="json" layout="pageDirection">
+			<f:selectItem itemValue="servlet" itemLabel="servlet" />
+			<f:selectItem itemValue="programming language" itemLabel="programming language" />
+			<f:selectItem itemValue="file format" itemLabel="file format" />			
+		</h:selectOneRadio></h5>
+		<br/></font>
+
+	 <span class="tab"> <h:commandButton value="Check answers" action="javaweb-response" style="width:140px;height:40px"/></span> 
+	 <span class="tab2"> <h:commandButton value="Reset" type="reset" style="width:140px;height:40px"/></span>
+	  <br/><br/> <hr/> <br/><br/>
+	</h:form>
+</h:body>
+
+</html>

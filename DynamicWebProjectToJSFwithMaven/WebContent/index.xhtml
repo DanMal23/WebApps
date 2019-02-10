@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>JSF MavenInDWP - Index</title>	
+	 <style type="text/css">
+ body {
+        background: #7c7070;
+        color: white;
+      }
+  </style>
+</h:head>
+<h:body>
+	<h3><a href="about.xhtml">About</a> | <a href="quizzes.xhtml">Quizzes</a> | <a href="index.xhtml">Home</a></h3>
+	<hr/> 
+	<h1>Welcome<h:outputText value="#{mbeanClass.message}" /></h1>
+	<hr/> 
+	<h:form>
+	<h3><h:commandLink action="about" value="About" /> |
+	<h:commandLink action="quizzes" value="Quizzes" /> |
+	<h:commandLink action="index" value="Home" /> |
+	</h3></h:form>
+
+</h:body>
+
+</html>
+
