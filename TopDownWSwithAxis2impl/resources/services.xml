@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- This file was auto-generated from WSDL --><!-- by the Apache Axis2 version: 1.6.4  Built on : Dec 28, 2015 (10:03:39 GMT) --><serviceGroup>
+    <service name="CoursesService">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="pl.edu.coursesonline.services.coursesservice.CoursesServiceMessageReceiverInOut"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">pl.edu.coursesonline.services.coursesservice.CoursesServiceSkeleton</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        <operation name="getCourseByCodeRequestNumber" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://coursesonline.edu.pl/services/CoursesService/">
+            <actionMapping>http://coursesonline.edu.pl/services/CoursesService/ICoursesService/getCourseByCodeRequestNumberRequest</actionMapping>
+            <outputActionMapping>http://coursesonline.edu.pl/services/CoursesService/ICoursesService/getCourseByCodeRequestNumberResponse</outputActionMapping>
+        </operation>
+    </service>
+</serviceGroup>

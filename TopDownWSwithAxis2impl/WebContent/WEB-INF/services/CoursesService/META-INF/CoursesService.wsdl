@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="CoursesService" targetNamespace="http://coursesonline.edu.pl/services/CoursesService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:book="http://coursesonline.edu.pl/categories/Courses" xmlns:tns="http://coursesonline.edu.pl/services/CoursesService/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://coursesonline.edu.pl/services/CourseService/">                
+         <xsd:import namespace="http://coursesonline.edu.pl/categories/Courses" schemaLocation="courses.xsd"/>
+      </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CourseRequest">
+    <wsdl:part name="parameters" element="book:CourseRequestType">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CourseResponse">
+    <wsdl:part name="parameters" element="book:CourseResponseType">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ICoursesService">
+    <wsdl:operation name="getCourseByCodeRequestNumber">
+      <wsdl:input message="tns:CourseRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:CourseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CoursesServiceSOAPBinding" type="tns:ICoursesService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getCourseByCodeRequestNumber">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CoursesService">
+    <wsdl:port name="CoursesServicePort" binding="tns:CoursesServiceSOAPBinding">
+      <soap:address location="http://localhost:8080/BenchResources_Axis2TopDown/services/courses/CoursesService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
