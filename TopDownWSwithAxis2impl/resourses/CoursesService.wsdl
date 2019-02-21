@@ -2,7 +2,7 @@
  <wsdl:definitions name="CoursesService" 
  targetNamespace="http://coursesonline.edu.pl/services/CoursesService/"
   xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-   xmlns:book="http://coursesonline.edu.pl/categories/Courses" 
+   xmlns:course="http://coursesonline.edu.pl/categories/Courses" 
   xmlns:tns="http://coursesonline.edu.pl/services/CoursesService/" 
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" >
@@ -15,12 +15,12 @@
    </wsdl:types>
    
   <wsdl:message name="CourseRequest">
-    <wsdl:part name="parameters" element="book:CourseRequestType">
+    <wsdl:part name="parameters" element="course:CourseRequestType">
     </wsdl:part>
   </wsdl:message>
   
   <wsdl:message name="CourseResponse">
-    <wsdl:part name="parameters" element="book:CourseResponseType">
+    <wsdl:part name="parameters" element="course:CourseResponseType">
     </wsdl:part>
   </wsdl:message>
     

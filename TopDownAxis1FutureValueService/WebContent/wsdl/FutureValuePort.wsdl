@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://financialmaths.online.com/FutureValueService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FutureValueService" targetNamespace="http://financialmaths.online.com/FutureValueService/">
+
+<!-- Abstract type -->
+   <wsdl:types>
+      <xsd:schema xmlns:xds="http://www.w3.org/2001/XMLSchema" targetNamespace="http://financialmaths.online.com/FutureValueService/">
+         <xsd:element name="futureValue" type="xsd:float"/>
+         <xsd:element name="parameters" type="tns:datacalc"/>
+         <xsd:complexType name="datacalc">
+            <xsd:sequence>
+				<xsd:element name="presentValue" type="xsd:float"/>
+				<xsd:element name="annualInterestRate" type="xsd:float"/>
+				<xsd:element name="years" type="xsd:float"/>           
+            </xsd:sequence>
+		</xsd:complexType>
+      </xsd:schema>
+   </wsdl:types>
+ 
+   <wsdl:message name="CalculateFutureValueRequest">
+    <wsdl:part element="tns:parameters" name="parameters"/>
+  </wsdl:message>
+    
+  <wsdl:message name="CalculateFutureValueResponse">
+    <wsdl:part element="tns:futureValue" name="futureValue"/>
+  </wsdl:message>
+  
+   
+  <wsdl:portType name="FutureValueService">
+    <wsdl:operation name="CalculateFutureValue">
+      <wsdl:input message="tns:CalculateFutureValueRequest"/>
+      <wsdl:output message="tns:CalculateFutureValueResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  
+  <!-- Concrete Binding Over HTTP or with SOAP-->
+  <wsdl:binding name="FutureValueSOAPBinding" type="tns:FutureValueService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CalculateFutureValue">
+      <soap:operation soapAction="http://financialmaths.online.com/FutureValueService/NewOperation"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+ 
+ <!-- Web Service offering endpoints for both bindings--> 
+  <wsdl:service name="FutureValue">
+    <wsdl:port binding="tns:FutureValueSOAPBinding" name="FutureValuePort">
+      <soap:address location="http://localhost:8080/TopDownAxis1FutureValueService/services/FutureValuePort"/>
+    </wsdl:port>
+  </wsdl:service> 
+</wsdl:definitions><!--wsdl file that will generate the packages and classes-->
